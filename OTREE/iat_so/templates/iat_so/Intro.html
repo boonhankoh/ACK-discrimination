@@ -1,0 +1,73 @@
+{% extends "iat_so/Page.html" %}
+{% load otree static %}
+{% load custom_tags %}
+
+{% block title %}
+{{block.super}}
+{% endblock %}
+
+{% block app_styles %}
+
+{{ block.super }}
+
+<style>
+
+table.stimuli {
+    margin-bottom: 1em;
+}
+
+table.stimuli td, table.stimuli th {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 0.2em;
+}
+
+table.stimuli th {
+    background: lightgray;
+}
+
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+    <p>
+        In the following pages, you will be shown a number of items and asked to use the keys <span class="key">{{ Constants.capture_keycodes.left.1 }}</span> and
+        <span class="key">{{ Constants.capture_keycodes.right.1 }}</span> on your keyboard to assign these items to categories.
+    </p>
+<p>
+  You should assign the following items to the following categories:
+</p>
+
+
+    <table class="stimuli">
+        <tr>
+            <th>Category</th>
+            <th>Item</th>
+        </tr>
+        <tr>
+            <td>Good</td>
+            <td>Triumph, Enjoy, Cherish, Attractive, Delightful, Glorious, Friendship, Magnificent</td>
+        </tr>
+        <tr>
+            <td>Bad</td>
+            <td>Hurtful, Scorn, Dirty, Sickening, Poison, Abuse, Yucky, Ugly</td>
+        </tr>
+        <tr>
+            <td>Gay People</td>
+            <td>Gay People, Homosexual, Gay, <img src="/static/iat_so/gay.png">, <img src="/static/iat_so/lesbian.png"></td>
+        </tr>
+        <tr>
+            <td>Straight People</td>
+            <td> Straight People, Heterosexual, Straight, <img src="/static/iat_so/straight.png"></td>
+        </tr>
+    </table>
+
+    <p>
+        There are {{ Constants.num_rounds }} sub-parts for which the instructions change. Please stay alert!
+    </p>
+
+{% delayed_next wait=0 label='NEXT' %}
+
+{% endblock %}

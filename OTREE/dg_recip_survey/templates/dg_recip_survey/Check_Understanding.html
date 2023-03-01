@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+{% load custom_tags %}
+
+
+
+{% block title %}
+{{block.super}}
+{% endblock %}
+
+
+
+{% block content %}
+<p>
+  To check that you understand the instructions, please answer the following question.
+</p>
+<p>
+My bonus payment from this part of Task {{task}} is determined by the decisions of <b>one</b> randomly chosen partner I have been matched with.
+</p>
+
+{% formfields %}
+
+
+
+{% delayed_next wait=0 label='SUBMIT'%}
+{% endblock %}

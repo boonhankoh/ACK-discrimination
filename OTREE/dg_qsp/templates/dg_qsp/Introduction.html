@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+{% load custom_tags %}
+
+
+
+{% block title %}
+{{block.super}}: Instructions {% if task == 1 %} II {% endif %}
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+{% include Constants.instructions_template %}
+<br>
+{% delayed_next wait=0 label='NEXT'%}
+{% endblock %}

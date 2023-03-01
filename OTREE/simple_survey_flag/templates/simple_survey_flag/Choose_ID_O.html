@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+  Part 1: Creation of Personal ID
+{% endblock %}
+
+{% block content %}
+<p>Your personal ID is a combination of i) alpha-numeric part and ii) a photo icon.
+</p>
+
+<p>We have randomly generated three alpha-numeric options from which you can choose.
+</p>
+
+    {% formfields %}
+
+
+    {% next_button %}
+
+{% endblock %}
+
+<!--
+<div class = "mc-ma">
+    {{players.otherID.label}}
+    <ul>
+        {% for choice in player.otherID %}
+    <li>
+        <label>{{choice.tag}}{{choice.choice_label}}</label>
+    </li>
+    {% endfor %}
+    </ul>
+</div> -->

@@ -1,0 +1,15 @@
+{% extends "iat_so/Page.html" %}
+{% load otree static %}
+{% load custom_tags %}
+
+{% block title %}
+{{block.super}}
+{% endblock %}
+
+
+{% block content %}
+    <p>Thank you for taking part in the experiment.</p>
+
+{% delayed_next wait=0 label='NEXT' %}
+
+{% endblock %}

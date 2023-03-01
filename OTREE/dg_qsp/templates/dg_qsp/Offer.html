@@ -1,0 +1,65 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+{% load custom_tags %}
+
+
+{% block title %}
+{{block.super}}: Decision
+{% endblock %}
+
+{% block content %}
+    {% include Constants.decision_template %}
+
+<div style="text-align: center;">
+  <button type="button" onclick="show_hide_Instructions()">Show/Hide Instructions</button>
+</div>
+    <div id="instructions">
+      <div class="card bg-light m-3">
+      <div class="card-body">
+          {% include Constants.instructions_template %}
+        </div>
+        </div>
+    </div>
+
+    <style>
+    #instructions {
+      display: none;
+    }
+    #submit {
+      display: none;
+    }
+</style>
+
+    <script>
+    function show_hide_Instructions() {
+      var x = document.getElementById("instructions");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+<br>
+<br>
+<div id="submit">
+  {% delayed_next wait=0 label='SUBMIT'%}
+</div>
+
+<script>
+  var slider = document.getElementById("myRange");
+  var output_1 = document.getElementById("their_amt");
+  var output_2 = document.getElementById("my_amt");
+  var button = document.getElementById("submit");
+
+
+  slider.oninput = function() {
+    output_1.innerHTML = this.value;
+    output_2.innerHTML = 100 - this.value;
+    button.style.display = "block";
+  }
+
+
+</script>
+
+{% endblock %}
