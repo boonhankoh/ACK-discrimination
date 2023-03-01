@@ -7,8 +7,8 @@ STATA
 3) Datasets required:
 "Data/cleaned-recip.dta"
 "Data/cleaned-dict.dta"
-"Data/anes_timeseries_2020_stata_20220210"
-"Data/survey_responses"
+"Data/anes_timeseries_2020_stata_20220210.zip" - extract as .dta file first
+"Data/survey_responses.xlsx"
 
 4) STATA Version 17.0
 
