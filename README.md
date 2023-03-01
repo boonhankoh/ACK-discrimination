@@ -5,10 +5,10 @@ STATA
 2) Make sure to change the directory at the beginning of the .DO file.
 
 3) Datasets required:
-"Data/cleaned-recip.dta"
-"Data/cleaned-dict.dta"
-"anes_timeseries_2020_stata_20220210" - Please download this from https://electionstudies.org/data-center/2020-time-series-study/
-"Data/survey_responses.xlsx"
+   - "Data/cleaned-recip.dta"
+   - "Data/cleaned-dict.dta"
+   - "anes_timeseries_2020_stata_20220210" - Please download this from https://electionstudies.org/data-center/2020-time-series-study/
+   - "Data/survey_responses.xlsx"
 
 4) STATA Version 17.0
 
